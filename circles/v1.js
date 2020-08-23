@@ -26,7 +26,9 @@ function draw() {
 }
 
 function drawCircle(x, y, radius) {
-
+  if (frameCount == 30){
+    background(0)
+  }
   circs.push(new ellipseSk(x, y, radius, "white"))
   if (radius > 10) {
     drawCircle(x + radius / 2, y, radius / 2);
@@ -46,12 +48,12 @@ class ellipseSk {
   }
 
   update(x, y, stroke,radius) {
-    this.x = (typeof x !== 'undefined') ? x : this.x;
-    this.y = (typeof y !== 'undefined') ? y : this.y;
-    this.stroke = (typeof stroke !== 'undefined') ? stroke : this.stroke;
+    // this.x = (typeof x !== 'undefined') ? x : this.x;
+    // this.y = (typeof y !== 'undefined') ? y : this.y;
+    // this.stroke = (typeof stroke !== 'undefined') ? stroke : this.stroke;
     // this.radius = (typeof radius !== 'undefined') ? radius : this.radius;
-    if (radius !== null)
-            this.radius = radius
+  //   if (radius !== null)
+  //           this.radius = radius
   }
 
   draw() {
@@ -63,7 +65,7 @@ class ellipseSk {
     ellipse(this.x, this.y, this.radius, this.radius);
   }
 }
-function mousePressed() {
-  pg.save("pg.png");
-}
+// function mousePressed() {
+//   pg.save("pg.png");
+// }
 

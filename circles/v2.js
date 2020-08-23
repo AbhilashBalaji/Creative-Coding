@@ -1,40 +1,55 @@
 let pg;
 let circs = [];
-let colors = ["#f887ff","#de004e","#860029","#321450","#29132e"]
+let colors = ["#f887ff", "#de004e", "#860029", "#321450", "#29132e"]
+let bg;
 function setup() {
     // put setup code here
-    createCanvas(2880, 1800);
-    pg = createGraphics(2880, 1800);
-    pg.background(random(colors));
+    createCanvas(windowWidth, windowHeight);
+    pg = createGraphics(windowWidth, windowHeight);
+    bg = random(colors)
+    pg.background(bg);
     background(0);
-    drawCircle(width / 2, height / 2, 700);
+   
+    // drawCircle(width * 2 / 4, height * 3 / 4, width / 4);
+
+
     image(pg, 0, 0, width, height);
-      frameRate(60);
-    noLoop()
+    frameRate(10);
+    drawCircle(width / 2, height / 2, width / 4);
+
+    // noLoop()
 }
 
 function draw() {
-
+    // drawCircle(width * 3 / 4, height / 2, width / 4);
+    if(frameCount %30 ==0)
+    {
+    drawCircle(width / 2, height / 2, width / 4);
+        return;
+    }
 
     circs.forEach(circle => {
         var r = random()
-        if (frameCount % 5 == 0){
-        if (r > 0.2) {
-            circle.update(null, null, random(colors), random([circle.radius + circle.radius / 2,circle.radius - circle.radius / 2]));
+        // if (frameCount % 1 == 0) {
+            if (r > 0.2) {
+                circle.update(null, null, random(colors), random([circle.radius - circle.radius / 10, circle.radius + circle.radius / 10]));
 
-            //   print(circle)
-        }
-        else {
-            circle.update( null, null,random(colors), random([circle.radius + circle.radius / 2,circle.radius - circle.radius / 2]));
+                //   print(circle)
+            }
+            else {
+                circle.update(null, null, random(colors), random([circle.radius - circle.radius / 10, circle.radius + circle.radius / 10]));
 
-        }
-        }
+            }
+        
         var r1 = random()
         {
-            if(r1>0.7)
-        circle.draw();
+            if (r1 > 0.7)
+                circle.draw();
+            else {
+                circle.delete()
+            }
         }
-    
+
 
 
     });
@@ -71,7 +86,7 @@ class ellipseSk {
             this.stroke = stroke
         if (radius !== null)
             this.radius = radius
-
+        this.delete()
         // print()
     }
 
@@ -80,11 +95,18 @@ class ellipseSk {
         pg.noFill();
         noFill();
         stroke(this.stroke)
-        pg.ellipse(this.x, this.y, min(this.radius,500), min(this.radius,500));
-        ellipse(this.x, this.y, min(this.radius,500), min(this.radius,500));
+        pg.ellipse(this.x, this.y, min(this.radius, 500), min(this.radius, 500));
+        ellipse(this.x, this.y, min(this.radius, 500), min(this.radius, 500));
+    }
+
+    delete() {
+        noFill()
+        stroke(bg)
+        pg.ellipse(this.x, this.y, this.radius,this.radius);
+        ellipse(this.x, this.y, this.radius,this.radius);
     }
 }
-function mousePressed() {
-    pg.save("pg.png");
-}
+// function mousePressed() {
+//     pg.save("pg.png");
+// }
 

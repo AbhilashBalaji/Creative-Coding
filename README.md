@@ -1,2 +1,2 @@
 # Creative-Coding
-My creative coding repo ,
+My creative coding repo.
