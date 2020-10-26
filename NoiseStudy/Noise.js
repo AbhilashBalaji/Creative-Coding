@@ -1,18 +1,16 @@
 let circs = [];
-let noiseScale = 0.00005;
+let noiseScale = 3.00005;
 function setup() {
     createCanvas(1000, 1000);
     pg = createGraphics(1000, 1000);
     image(pg, 0, 0, width, height);
-    pg.background(0)
+    pg.background("white")
     background(0)
-    for (i = 0; i < width; i++) {
-        for (j = 0; j < height; j++) { 
-            if(noise(i,j) > 0.5)
-            circs.push(new circle(i,j,"black",noise(i,j)*noiseScale))
-            else
-            circs.push(new circle(i,j,"green",noise(i,j)*noiseScale))
-
+    c2 = color("#ffff3f")
+    c1 = color("#007f5f")
+    for (i = 0; i < width; i+=2) {
+        for (j = 0; j < height; j+=2) { 
+            circs.push(new circle(i,j,lerpColor(c1,c2,Math.sqrt(i*i+j*j)/Math.sqrt(width*width+height*height)),noise(i,j)*noiseScale))
         }
     }
     noLoop()
@@ -21,8 +19,8 @@ function setup() {
 
 
 function draw() {
-    background(0)
-    pg.background(0)
+    background("black")
+    pg.background("black")
 
     circs.forEach(circle => {
         circle.draw()
@@ -51,6 +49,11 @@ class circle {
     }
 }
 
-function mousePressed() {
-    pg.save("pg.png");
-}
+function keyPressed(){
+    if(keyCode == ENTER)
+    {
+    var d = new Date();
+    pg.save("pg"+String(d.getTime())+".png")
+    }
+  
+  }
