@@ -4,4 +4,8 @@ processing*
 of/
 init_stuff/
 .DS_Store
-
+Islamic_Patterns/
+!Islamic_Patterns/src/
+4-10-2020/
+!4-10-2020/src/
+touchFlames/Backup/

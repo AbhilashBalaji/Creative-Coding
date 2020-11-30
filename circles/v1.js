@@ -4,7 +4,7 @@ function setup() {
   // put setup code here
   createCanvas(2000, 2000);
   pg = createGraphics(2000, 2000);
-  pg.background("#002b36");
+  pg.background("#38236d");
   background(0);
   drawCircle(width / 2, height / 2, 1000);
   image(pg, 0, 0, width, height);
@@ -18,7 +18,7 @@ function draw() {
   circs.forEach(circle => {
     var r = random()
     if (r > 0.7)
-      circle.update(null,null,"#bbbbbb",null);
+      circle.update(null,null,"#060607",null);
     r = random()
     if (r < 0.6)
       circle.update(circle.x+circle.radius/2,circle.y-circle.radius/2,null,null)
@@ -41,12 +41,12 @@ function draw() {
 
     r = random()
     if(r < 0.70)
-    circle.update(null,null,"#2aa198",null)
+    circle.update(null,null,"#236d38",null)
 
     r = random()
 
 
-    if (r > 0.7)
+    if (r > 0.9)
     circle.draw()
   });
 // wait
@@ -58,7 +58,7 @@ function drawCircle(x, y, radius) {
   if (frameCount == 30){
     background(0)
   }
-  circs.push(new ellipseSk(x, y, radius, "#fdf6e3"))
+  circs.push(new ellipseSk(x, y, radius, "#2844c1"))
   if (radius > 15) {
     drawCircle(x + radius / 2, y, radius / 2);
     drawCircle(x - radius / 2, y, radius / 2);
