@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<world name="World">
+	<int name="format_version">2</int>
+	<IFS name="Moebius, Moebius, Moebius, Spherical, Curl, Horseshoe, Coth spiral, Moebius inverse, Moebius, Curl, Moebius inverse">
+		<imaging name="Imaging">
+			<int name="image_width">5000</int>
+			<int name="image_height">5000</int>
+			<int name="image_aa_level">2</int>
+			<int name="image_layers">1</int>
+			<int name="image_quality">0</int>
+			<string name="antialiasing_mode">strong</string>
+			<real name="brightness">4</real>
+			<vec4 name="background_colour">0.1 0.1 0.1 1</vec4>
+			<bool name="apply_bg_before_curves">false</bool>
+			<real name="flam3_gamma">3.6</real>
+			<real name="flam3_vibrancy">1</real>
+			<bool name="flam3_use_highlight_power">false</bool>
+			<real name="flam3_highlight_power">0.003</real>
+			<real name="flam3_gamma_linear_threshold">0</real>
+			<table name="layer_weights">
+				<values>1 1 1 1</values>
+			</table>
+		</imaging>
+		<camera name="Camera">
+			<vec2 name="pos">0 0</vec2>
+			<real name="rotate">0</real>
+			<real name="sensor_width">4</real>
+		</camera>
+		<node name="iterators">
+			<iterator name="Iterator 1">
+				<flam3_transform name="Transform 0">
+					<affine2 name="Pre affine">
+						<real name="x_axis_angle">0</real>
+						<real name="x_axis_length">1</real>
+						<real name="y_axis_angle">-90.00000000000001</real>
+						<real name="y_axis_length">1</real>
+						<vec2 name="offset">0 0</vec2>
+					</affine2>
+					<node name="transforms">
+						<flam3_variation name="Moebius">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">0.26036901396566353</real>
+								<real name="Im_A">-0.9204503102967405</real>
+								<real name="Re_B">2.233277498929902</real>
+								<real name="Im_B">-3.433076314870152</real>
+								<real name="Re_C">0.14079594308210108</real>
+								<real name="Im_C">-0.6326001953151409</real>
+								<real name="Re_D">0.26036901396566353</real>
+								<real name="Im_D">-0.9204503102967405</real>
+							</params>
+						</flam3_variation>
+					</node>
+				</flam3_transform>
+				<flam3_shader name="Shader">
+					<real name="palette_index">0.28534513199701905</real>
+					<real name="blend_speed">0.2375283021233304</real>
+					<real name="opacity">1</real>
+					<table name="layer_weights">
+						<values>1 1 1 1</values>
+					</table>
+				</flam3_shader>
+				<weights_selector name="Weights">
+					<real name="base_weight">1</real>
+					<node name="per_iterator_weights">
+						<real name="Iterator 1 weight">1.8150726840436997</real>
+						<real name="Iterator 2 weight">1.179904034221702</real>
+						<real name="Iterator 3 weight">1.4836537122391467</real>
+						<real name="Iterator 4 weight">1.3643985814132518</real>
+					</node>
+				</weights_selector>
+				<real name="time_scale">1</real>
+			</iterator>
+			<iterator name="Iterator 2">
+				<flam3_transform name="Transform 1">
+					<affine2 name="Pre affine">
+						<real name="x_axis_angle">0</real>
+						<real name="x_axis_length">1</real>
+						<real name="y_axis_angle">-90.00000000000001</real>
+						<real name="y_axis_length">1</real>
+						<vec2 name="offset">0 0</vec2>
+					</affine2>
+					<node name="transforms">
+						<flam3_variation name="Moebius">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">-0.2416133624720505</real>
+								<real name="Im_A">-0.16801947616829194</real>
+								<real name="Re_B">-0.2416133624720505</real>
+								<real name="Im_B">0.8319805238317081</real>
+								<real name="Re_C">-0.2416133624720505</real>
+								<real name="Im_C">0.8319805238317081</real>
+								<real name="Re_D">-0.2416133624720505</real>
+								<real name="Im_D">1.831980523831708</real>
+							</params>
+						</flam3_variation>
+					</node>
+				</flam3_transform>
+				<flam3_shader name="Shader">
+					<real name="palette_index">0.05221368046477437</real>
+					<real name="blend_speed">0.16678636878999953</real>
+					<real name="opacity">1</real>
+					<table name="layer_weights">
+						<values>1 1 1 1</values>
+					</table>
+				</flam3_shader>
+				<weights_selector name="Weights">
+					<real name="base_weight">1</real>
+					<node name="per_iterator_weights">
+						<real name="Iterator 1 weight">1.0788198319406677</real>
+						<real name="Iterator 2 weight">1.276449999870959</real>
+						<real name="Iterator 3 weight">2.571283385096382</real>
+						<real name="Iterator 4 weight">2.4414657980089003</real>
+					</node>
+				</weights_selector>
+				<real name="time_scale">1</real>
+			</iterator>
+			<iterator name="Iterator 3">
+				<flam3_transform name="Transform 2">
+					<affine2 name="Pre affine">
+						<real name="x_axis_angle">43.05929764173925</real>
+						<real name="x_axis_length">1</real>
+						<real name="y_axis_angle">-121.84980503611862</real>
+						<real name="y_axis_length">1</real>
+						<vec2 name="offset">-0.6629247713834048 -0.6629247713834048</vec2>
+					</affine2>
+					<node name="pre_transforms">
+						<flam3_variation name="Moebius">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">-0.6106331986174289</real>
+								<real name="Im_A">-0.3184577725040726</real>
+								<real name="Re_B">-0.8807647223375957</real>
+								<real name="Im_B">-0.30011198138181133</real>
+								<real name="Re_C">-0.39308614663834024</real>
+								<real name="Im_C">0.37157469855047165</real>
+								<real name="Re_D">-0.31574234331275924</real>
+								<real name="Im_D">-1.2411791003708839</real>
+							</params>
+						</flam3_variation>
+					</node>
+					<node name="transforms">
+						<flam3_variation name="Spherical">
+							<string name="variation_name">spherical</string>
+							<params>
+								<real name="spherical">0.6357702944538464</real>
+							</params>
+						</flam3_variation>
+						<flam3_variation name="Curl">
+							<string name="variation_name">curl</string>
+							<params>
+								<real name="curl">0.6530491812905417</real>
+								<real name="curl_c1">0.5674782975111157</real>
+								<real name="curl_c2">0.45571966958232224</real>
+							</params>
+						</flam3_variation>
+						<flam3_variation name="Horseshoe">
+							<string name="variation_name">horseshoe</string>
+							<params>
+								<real name="horseshoe">1.2227610262702746</real>
+							</params>
+						</flam3_variation>
+						<flam3_variation name="Coth spiral">
+							<string name="variation_name">coth_spiral</string>
+							<params>
+								<real name="coth_spiral">1.0621056878524764</real>
+								<real name="coth_spiral_a">14</real>
+							</params>
+						</flam3_variation>
+					</node>
+					<node name="post_transforms">
+						<flam3_variation name="Moebius inverse">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">-0.31574234331275924</real>
+								<real name="Im_A">-1.2411791003708839</real>
+								<real name="Re_B">0.8807647223375957</real>
+								<real name="Im_B">0.30011198138181133</real>
+								<real name="Re_C">0.39308614663834024</real>
+								<real name="Im_C">-0.37157469855047165</real>
+								<real name="Re_D">-0.6106331986174289</real>
+								<real name="Im_D">-0.3184577725040726</real>
+							</params>
+						</flam3_variation>
+					</node>
+				</flam3_transform>
+				<flam3_shader name="Shader">
+					<real name="palette_index">0.852576017845422</real>
+					<real name="blend_speed">0.4425685945583048</real>
+					<real name="opacity">1</real>
+					<table name="layer_weights">
+						<values>1 1 1 1</values>
+					</table>
+				</flam3_shader>
+				<weights_selector name="Weights">
+					<real name="base_weight">1</real>
+					<node name="per_iterator_weights">
+						<real name="Iterator 1 weight">1.3823165355980482</real>
+						<real name="Iterator 2 weight">2.9982792801983815</real>
+						<real name="Iterator 3 weight">1.506023479264489</real>
+						<real name="Iterator 4 weight">3.3685082902325916</real>
+					</node>
+				</weights_selector>
+				<real name="time_scale">1</real>
+			</iterator>
+			<iterator name="Iterator 4">
+				<flam3_transform name="Transform 3">
+					<affine2 name="Pre affine">
+						<real name="x_axis_angle">155.18065623007715</real>
+						<real name="x_axis_length">1</real>
+						<real name="y_axis_angle">-79.98233133381474</real>
+						<real name="y_axis_length">1</real>
+						<vec2 name="offset">0.26538596376776696 0.26538596376776696</vec2>
+					</affine2>
+					<node name="pre_transforms">
+						<flam3_variation name="Moebius">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">-1.0203193590664916</real>
+								<real name="Im_A">-0.4592085602286189</real>
+								<real name="Re_B">0.7574996719396008</real>
+								<real name="Im_B">-0.4642077972224329</real>
+								<real name="Re_C">0.8807558826865106</real>
+								<real name="Im_C">-0.31505824080062445</real>
+								<real name="Re_D">-1.35923810647993</real>
+								<real name="Im_D">0.10042525084346389</real>
+							</params>
+						</flam3_variation>
+					</node>
+					<node name="transforms">
+						<flam3_variation name="Curl">
+							<string name="variation_name">curl</string>
+							<params>
+								<real name="curl">0.24183057726216672</real>
+								<real name="curl_c1">0.6340076299384236</real>
+								<real name="curl_c2">0.46342652500607073</real>
+							</params>
+						</flam3_variation>
+					</node>
+					<node name="post_transforms">
+						<flam3_variation name="Moebius inverse">
+							<string name="variation_name">mobius</string>
+							<params>
+								<real name="mobius">1</real>
+								<real name="Re_A">-1.35923810647993</real>
+								<real name="Im_A">0.10042525084346389</real>
+								<real name="Re_B">-0.7574996719396008</real>
+								<real name="Im_B">0.4642077972224329</real>
+								<real name="Re_C">-0.8807558826865106</real>
+								<real name="Im_C">0.31505824080062445</real>
+								<real name="Re_D">-1.0203193590664916</real>
+								<real name="Im_D">-0.4592085602286189</real>
+							</params>
+						</flam3_variation>
+					</node>
+				</flam3_transform>
+				<flam3_shader name="Shader">
+					<real name="palette_index">0.6918780652340502</real>
+					<real name="blend_speed">0.07400725725637167</real>
+					<real name="opacity">1</real>
+					<table name="layer_weights">
+						<values>1 1 1 1</values>
+					</table>
+				</flam3_shader>
+				<weights_selector name="Weights">
+					<real name="base_weight">1</real>
+					<node name="per_iterator_weights">
+						<real name="Iterator 1 weight">1.388737734037239</real>
+						<real name="Iterator 2 weight">2.052268954875103</real>
+						<real name="Iterator 3 weight">2.18546784208452</real>
+						<real name="Iterator 4 weight">6.080212706912379</real>
+					</node>
+				</weights_selector>
+				<real name="time_scale">1</real>
+			</iterator>
+		</node>
+		<colouring>
+			<curve name="hue">
+				<table name="knots">
+					<values>0 0.14285715 0.2857143 0.42857146 0.5714286 0.71428573 0.8571429 1</values>
+				</table>
+				<table name="values">
+					<values>0.40198004 0.027609201 0.38972035 0.06946375 0.924212 0.024065701 0.23933174 0.5071066</values>
+				</table>
+				<table name="back_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+				<table name="forw_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+			</curve>
+			<curve name="saturation">
+				<table name="knots">
+					<values>0 0.14285715 0.2857143 0.42857146 0.5714286 0.71428573 0.8571429 1</values>
+				</table>
+				<table name="values">
+					<values>0.68104863 0.8796114 0.66604793 0.87844574 0.78210557 0.52213216 0.7767826 0.6744052</values>
+				</table>
+				<table name="back_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+				<table name="forw_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+			</curve>
+			<curve name="value">
+				<table name="knots">
+					<values>0 0.14285715 0.2857143 0.42857146 0.5714286 0.71428573 0.8571429 1</values>
+				</table>
+				<table name="values">
+					<values>0.36557686 0.5431448 0.38643485 0.47807783 0.0137269795 0.5257851 0.5293627 0.4126438</values>
+				</table>
+				<table name="back_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+				<table name="forw_tension">
+					<values>0 0 0 0 0 0 0 0</values>
+				</table>
+			</curve>
+		</colouring>
+	</IFS>
+</world>

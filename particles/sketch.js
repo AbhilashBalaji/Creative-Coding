@@ -5,7 +5,7 @@ var a1, a2, a3, a4, a5, amax;
 var bw=true;
 function setup() {
   createCanvas(1000, 1000);
-  background(255);
+  background(0);
   noFill();  
   colorMode(HSB, 333, 222, 150, 200);
   strokeWeight(.19);
