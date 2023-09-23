@@ -1,7 +1,7 @@
 var w = 700;
 var csize=9000;
 var Phi= 1.618033988749895;
-var lim = 10;
+var lim = 1;
 
 function Point(x,y) {
     this.x = x;
@@ -26,14 +26,16 @@ function Triangle(a,b,c){
 
 function Skinny(a,b,c) {
     Triangle.call(this,a,b,c);
-    this.color = 'white'
+    // random darker color pallette
+    this.color = random(['#361134','#B0228C','#EA3788','#E56B70','#F391A0','#F39130']);
 }
 
 Skinny.prototype = Object.create(Triangle.prototype)
 
 function Fat(a,b,c) {
     Triangle.call(this,a,b,c);
-    this.color = 'black'
+    this.color = random(['#22577A','#38A3A5','#57CC99','#80ED99','#00FFFF','##C7F9CC']);
+
 }
 Fat.prototype = Object.create(Triangle.prototype)
 
@@ -80,7 +82,7 @@ function setup() {
     createCanvas(csize,csize);
     pg = createGraphics(csize, csize);
     image(pg, 0, 0, csize, csize);
-    // pg.background(0)
+    pg.background("black");
 
 
 }

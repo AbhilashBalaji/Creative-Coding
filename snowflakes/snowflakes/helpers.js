@@ -100,14 +100,14 @@ const layerConstructors = [
     }),
     weight: 0.3
   },
-  {
-    name: 'Dotted Lines',
-    init: (props) => dottedLines({
-      ...props,
-      ...setState(state)
-    }),
-    weight: 0.3
-  },
+  // {
+  //   name: 'Dotted Lines',
+  //   init: (props) => dottedLines({
+  //     ...props,
+  //     ...setState(state)
+  //   }),
+  //   weight: 0.3
+  // },
   {
     name: 'Ring of Shapes',
     init: (props) => ringOfShapes({
@@ -133,7 +133,16 @@ const layerConstructors = [
       ...setState(state)
     }),
     weight: 1
-  }
+  },
+  {
+    name: 'Penrose Center',
+    init: (props) => PenroseCenter({
+      ...props,
+      ...setState(state)
+    }),
+    weight: 0.3
+  },
+
 ]
 
 const makeCrystal = (pos) => {

@@ -1,8 +1,8 @@
 const state = {
   sides: SIDES,
   stepsOut: 8,
-  thinStroke: 1,
-  thickStroke: 3
+  thinStroke: 5,
+  thickStroke: 15
 }
 
 const setState = (state) => {
@@ -139,7 +139,7 @@ const ringOfShapes = (state) => {
   state.center = state.steps * state.singleStep
   state.randomShape = random(1)
   state.direction = randomSelectTwo() // used for triangle only
-  state.fillColor = randomSelectTwo() ? state.layerColor : color(0, 1)
+  state.fillColor = "neon green";
   state.weight = randomSelectTwo() ? state.thinStroke : state.thickStroke
 
   if (state.steps < state.stepsOut / 2) {
@@ -197,7 +197,32 @@ const steppedHexagons = (state) => {
     }
   })
 }
+// Penrose tiling around the center
+const  PenroseCenter= (state) => {
+  state.numShapes = state.sides
+  state.angle = 360 / state.numShapes
+  state.weight = randomSelectTwo() ? state.thinStroke : state.thickStroke
+  state.centerOffset = state.singleStep * 1.25
+  state.shapeSize = ((CRYSTAL_SIZE / 2) - state.centerOffset) * 0.93
 
+  return ({
+    name: 'Penrose Center',
+    state,
+    render: () => {
+      stroke(state.layerColor)
+      strokeWeight(state.weight)
+      push()
+      //translate(width / 2, height / 2)
+      for (let i = 0; i < state.numShapes; i++) {
+        hexagon(0, 0, state.shapeSize)
+        rotate(state.angle)
+      }
+      pop()
+    }
+  })
+  
+  
+}
 
 
 
